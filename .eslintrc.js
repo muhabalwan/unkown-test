@@ -11,19 +11,24 @@ module.exports = {
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+        "ecmaVersion": 2018,
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks",
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "quotes": ["error", "double"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": "off"
     },
-
+    "settings": {
+        "react": {
+          "pragma": "React",
+          "version": "detect"
+        }
+      }
 };
